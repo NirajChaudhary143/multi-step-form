@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+       <div class="logoContainer">
+            <p>Tech<span style="color: #ff004f;">Jar</span></p>
+       </div>
+       <div class="sub-title">
+            <p>Multi Step Form</p>
+       </div>
+       <div class="form-container">
+            <div class="link-container">
+                <button class="link-btn link-btn-active">1</button>
+                <button class="link-btn">2</button>
+                <button class="link-btn">3</button>
+            </div>
+            <div class="title">
+                <h1>Your Information</h1>
+            </div>
+            <hr>
+            <!-- FOrm start -->
+            <div class="form-content">
+                <form action="#">
+                    <!-- item one -->
+                    <div class="item1">
+                        <label>Name<span style="color: red;">*</span></label><br>
+                        <input type="text" placeholder="Niraj Chaudhary" required>
+                        <div class="alert-box">
+                            <span style="color: red"></span>
+                        </div>
+                        <label >Gender<span style="color: red;">*</span></label><br>
+                        <input type="radio" name="gender">
+                        <label for="">Male</label>
+                        <input type="radio" name="gender">
+                        <label for="">Female</label>
+                        <input type="radio" name="gender">
+                        <label for="">Others</label>
+                    </div>
+                    <!-- item two -->
+                    <div class="item2">
+                        <label>Phone<span style="color: red;">*</span></label><br>
+                        <input type="text" placeholder="9812000000" required>
+                        <div class="alert-box">
+                            <span style="color: red"></span>
+                        </div>
+                        <label>Address<span style="color: red;">*</span></label><br>
+                        <input type="text" placeholder="Patan Sundhara" required>
+                    </div>
+                    <!-- Item three -->
+                    <div class="item3">
+                        <label>Email<span style="color: red;">*</span></label><br>
+                        <input type="email" placeholder="nirajchy@gmail.com" required>
+                        <div class="alert-box">
+                            <span style="color: red"></span>
+                        </div>
+                        <label>Password<span style="color: red;">*</span></label><br>
+                        <input type="password" placeholder="********" required>
+                    </div>
+                    <div class="buttons">
+                        <button class="pagination-btns" onclick="event.preventDefault()" id="previous">Previous</button>
+                        <button class="pagination-btns" onclick="event.preventDefault()" id="next">Next</button>
+                        <input class="pagination-btns" id="submitBtn" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+       </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>

@@ -19,6 +19,7 @@
                 <button class="link-btn link-btn-active">1</button>
                 <button class="link-btn">2</button>
                 <button class="link-btn">3</button>
+                <button class="link-btn">4</button>
             </div>
             <div class="title">
                 <h1>Your Information</h1>
@@ -26,45 +27,57 @@
             <hr>
             <!-- FOrm start -->
             <div class="form-content">
-                <form action="#">
+                <form action="#" name="info-form" method="post">
                     <!-- item one -->
                     <div class="item1">
                         <label>Name<span style="color: red;">*</span></label><br>
-                        <input type="text" placeholder="Niraj Chaudhary" required>
+                        <input type="text" name="name" placeholder="Niraj Chaudhary" required>
                         <div class="alert-box">
-                            <span style="color: red"></span>
+                            <span id="errorName" style="color: red"></span>
                         </div>
                         <label >Gender<span style="color: red;">*</span></label><br>
-                        <input type="radio" name="gender">
-                        <label for="">Male</label>
-                        <input type="radio" name="gender">
+                        <input type="radio" name="gender" value="male">
+                        <label for="" >Male</label>
+                        <input type="radio" name="gender" value="female">
                         <label for="">Female</label>
-                        <input type="radio" name="gender">
+                        <input type="radio" name="gender" value="others">
                         <label for="">Others</label>
+                        <div class="alert-box">
+                            <span id="errorGender" style="color: red"></span>
+                        </div>
                     </div>
                     <!-- item two -->
                     <div class="item2">
                         <label>Phone<span style="color: red;">*</span></label><br>
-                        <input type="text" placeholder="9812000000" required>
+                        <input type="text" name="phone" placeholder="9812000000" required>
                         <div class="alert-box">
-                            <span style="color: red"></span>
+                            <span id="errorPhone" style="color: red"></span>
                         </div>
                         <label>Address<span style="color: red;">*</span></label><br>
-                        <input type="text" placeholder="Patan Sundhara" required>
+                        <input type="text" id="" name="address" placeholder="Patan Sundhara" required>
+                        <div class="alert-box">
+                            <span id="errorAddress" style="color: red"></span>
+                        </div>
                     </div>
                     <!-- Item three -->
                     <div class="item3">
                         <label>Email<span style="color: red;">*</span></label><br>
-                        <input type="email" placeholder="nirajchy@gmail.com" required>
+                        <input type="email" name="email" placeholder="nirajchy@gmail.com" required>
                         <div class="alert-box">
-                            <span style="color: red"></span>
+                            <span id="errorEmail" style="color: red"></span>
                         </div>
                         <label>Password<span style="color: red;">*</span></label><br>
-                        <input type="password" placeholder="********" required>
+                        <input type="password" name="password" placeholder="********" required>
+                        <div class="alert-box">
+                            <span id="errorPassword" style="color: red"></span>
+                        </div>
+                    </div>
+                    <div class="item4">
+                        
                     </div>
                     <div class="buttons">
-                        <button class="pagination-btns" onclick="event.preventDefault()" id="previous">Previous</button>
-                        <button class="pagination-btns" onclick="event.preventDefault()" id="next">Next</button>
+                        <button class="pagination-btns" id="previous">Previous</button>
+                        <button class="pagination-btns" id="next">Next</button>
                         <input class="pagination-btns" id="submitBtn" type="submit" value="Submit">
                     </div>
                 </form>

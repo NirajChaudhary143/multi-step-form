@@ -26,7 +26,7 @@ body{
     clip-path: circle(40%);
     padding: 10px;
     background-color: #e5e5e5;
-    margin: 0px 100px;
+    margin: 0px 50px;
     cursor: pointer;
     font-weight: 600;
 }
@@ -64,6 +64,10 @@ input[type="text"],input[type="email"],input[type="password"]{
     width: 100%;
     height: 35px;
 }
+/* input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus{
+    border: 0;
+    border-color: #ff004f;
+} */
 input[type="radio"]{
     margin: 10px 0; 
 }
@@ -89,6 +93,6 @@ input[type="radio"]{
 
 /* item display css */
 
-.item2, .item3{
+.item2, .item3,.item4{
     display: none;
 }

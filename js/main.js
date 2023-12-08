@@ -1,5 +1,6 @@
 // link btn active next btn
 var linkNumber =1;
+var preNumberLatest;
 var nextlinkBtn = document.querySelector("#next");
 var prelinkBtn = document.querySelector("#previous");
 var errorName = document.querySelector("#errorName");
@@ -10,12 +11,7 @@ var errorGender = document.querySelector("#errorGender");
 var errorEmail = document.querySelector("#errorEmail");
 var listOfBtnLink = document.querySelectorAll(".link-btn");
 const form = document.forms['info-form'];
-
-// console.log(fullName);
-
 var checkedGender,inputName, inputAddress, inputPhone, inputEmail;
-
-
 var item1 = document.querySelector(".item1");
 var item2 = document.querySelector(".item2");
 var item3 = document.querySelector(".item3");
@@ -28,6 +24,7 @@ const NextActiveLink = (linkNumber) =>{
             item.classList.add("link-btn-active");
         }
     });
+    preNumberLatest=linkNumber;
     if(linkNumber==2){
         item2.style.display ="block";
         item1.style.display="none";
@@ -55,23 +52,32 @@ const NextActiveLink = (linkNumber) =>{
     }
 
 }
-const PrevActiveLink = (linkNumber) =>{
-    let updatedNumber = linkNumber+1;
+const PrevActiveLink = (preNumberLatest) =>{
+    let updatedNumber = preNumberLatest+1;
                 listOfBtnLink.forEach(item=>{
                     if(item.innerText == updatedNumber){
                         item.classList.remove("link-btn-active");
                     }
                 });
+                
+                
+        if (preNumberLatest==3) {
+            item4.style.display ="none";
+            item3.style.display="block";
+            nextlinkBtn.style.display="block";
+            document.querySelector("#submitBtn").style.display="none";
+        }
 
-        if(linkNumber==2){
+        if(preNumberLatest==2){
             item2.style.display ="block";
             item3.style.display="none";
         }
-        if(linkNumber==1){
+        if(preNumberLatest==1){
             item1.style.display ="block";
             item2.style.display="none";
             prelinkBtn.style.display="none";
             document.querySelector("#submitBtn").style.display="none";
+            // linkNumber=preNumberLatest;
         }
 }
 
@@ -208,21 +214,22 @@ if(linkNumber == 1){
     prelinkBtn.style.display="none";
 }
 prelinkBtn.addEventListener('click',(e)=>{
+    console.log("just clicked pre",preNumberLatest);
     e.preventDefault();
-    if(linkNumber>1){
-        if (linkNumber>=2) {   
-                --linkNumber;
-                console.log("page number: pre>=2",linkNumber);
+    if(preNumberLatest>1){
+        if (preNumberLatest>=2) {   
+                --preNumberLatest;
+                console.log("page number: pre>=2",preNumberLatest);
                 // prelinkBtn.style.display="block";
                 // nextlinkBtn.style.display="block";
-                PrevActiveLink(linkNumber);
+                PrevActiveLink(preNumberLatest);
             }
     }
-    if(linkNumber == 1){
-        console.log("page number: pre==1",linkNumber);
+    if(preNumberLatest == 1){
+        console.log("page number: pre==1",preNumberLatest);
         e.preventDefault();
         prelinkBtn.style.display="none";
-        PrevActiveLink();
+        PrevActiveLink(preNumberLatest);
     }
     
 });

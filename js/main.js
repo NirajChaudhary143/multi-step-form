@@ -32,7 +32,8 @@ const NextActiveLink = (linkNumber) =>{
     if(linkNumber==3){
         item3.style.display ="block";
         item2.style.display="none";
-        nextlinkBtn.style.display="block";
+        nextlinkBtn.innerText="View Details"
+        // nextlinkBtn.style.display="block";
     }
     if(linkNumber==4){
         item3.style.display="none";

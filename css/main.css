@@ -14,9 +14,16 @@ body{
 }
 .logoContainer p{
     font-family: 'Marador', sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
+    margin: 20px 0;
+}
+.sub-title{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: bold;
 }
 /* link container */
 .link-container{
@@ -90,10 +97,54 @@ input[type="radio"]{
     border-radius: 10px;
     font-size: 15px;
     cursor: pointer;
+    transition: all .5s;
+}
+.pagination-btns:hover{
+    color: black;
+    /* border: 1px solid black; */
 }
 
 /* item display css */
 
 .item2, .item3,.item4{
     display: none;
+}
+
+
+/* Responsive */
+
+@media screen and (min-width:600px) and (max-width:970px) {
+    .link-container .link-btn{
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:600px) {
+    .link-container .link-btn{
+        margin: 0 5px;
+    }
+    .form-container .title h1{
+        font-size: 20px;
+    }
+    .sub-title h1{
+        font-size: 25px;
+    }
+    .pagination-btns{
+        padding: 5px 15px;
+        font-size: 13px;
+    }
+    .item4{
+        font-size: 13px;
+    }
+    label{
+        font-size: 13px;
+    }
+    .logoContainer p{
+        margin: 5px 0;
+    }
+    .sub-title{
+        margin: 10px 0;
+    }
+    .alert-box span{
+        font-size: 13px;
+    }
 }
